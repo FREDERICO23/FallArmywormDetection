@@ -6,7 +6,7 @@
     <style>
       /* Define the background image */
       body {
-        background-image: url("b4.jpg");
+        background-image: url(" {% static 'b.jpg' %}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -15,6 +15,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+      
           
       }
       
@@ -50,8 +51,8 @@
       <img src="{% static 'agricaptcha1.png' %}" alt="Maize Farm">
       <br>
       <h2>What we do</h2>
-      <p>We help farmers to identify pests and diseases on their farms</p>
-      <p>Our AI tools help you to identify pests and diseases on your farm</p>
+      <h4>We help farmers to identify pests and diseases on their farms</h4>
+      <h4>Our AI tools help you to identify pests and diseases on your farm</h4>
       <br>
       <div class="buttons">
         <a href="{% url 'register' %}" class="button signup">Sign up</a>

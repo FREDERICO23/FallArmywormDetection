@@ -42,7 +42,7 @@ def register(request):
 def logout_request(request):
     logout(request)
     messages.info(request, "You've successfully logged out")
-    return redirect("image-classifier")
+    return redirect("home")
 
 def login_request(request):
     if request.method == "POST":
@@ -155,7 +155,7 @@ def generate_report(request):
 
     # Generate the PDF report
     template_path = 'report.html'
-    context = {'predictions': preds}
+    context = {'preds': preds}
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'attachment; filename="report.pdf"'
     template = get_template(template_path)
